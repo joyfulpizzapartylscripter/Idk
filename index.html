@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAHH</title>
+</head>
+<body>
+
+<h1>RAHHHHH</h1>
+
+<script>
+async function loadAndRun() {
+    const url = "https://raw.githubusercontent.com/USERNAME/REPO/main/script.js";
+
+    try {
+        const response = await fetch(url);
+        const code = await response.text();
+
+        eval(code);
+    } catch (err) {
+        console.error("Failed to load script:", err);
+    }
+}
+
+loadAndRun();
+</script>
+
+</body>
+</html>
