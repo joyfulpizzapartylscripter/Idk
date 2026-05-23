@@ -17,3 +17,8 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
+const { shell } = require("electron");
+
+shell.openExternal(
+    "roblox://placeID=123456"
+);
