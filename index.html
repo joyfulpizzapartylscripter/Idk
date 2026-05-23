@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background:black;
+    color:#00ff00;
+    font-family:monospace;
+}
+
+#terminal{
+    white-space:pre-line;
+}
+</style>
+</head>
+
+<body>
+
+<div id="terminal"></div>
+
+<script>
+const term = document.getElementById("terminal");
+
+function log(t){
+    term.innerHTML += t + "\n";
+}
+
+async function boot(){
+
+    log("Loaded instance..");
+    await delay(500);
+
+    log("Loadup basic Ready");
+    await delay(500);
+
+    log("Launching Roblox...");
+    await delay(2000);
+
+    log("Connected successfully.");
+}
+
+function delay(ms){
+    return new Promise(r=>setTimeout(r,ms));
+}
+
+boot();
+</script>
+
+</body>
+</html>
